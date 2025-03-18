@@ -1,0 +1,6 @@
+name: "catalogue"
+env:
+  - name: MONGO_URL
+    value: "mongodb://mongo.dev.devrobp.online:27017/catalogue"
+  - name: MONGO
+    value: "true"
