@@ -1,4 +1,4 @@
-name: cart
+name: payment
 port: 8080
 env:
   - name: CART_HOST
@@ -10,7 +10,7 @@ env:
   - name: USER_PORT
     value: "8080"
   - name: AMQP_HOST
-    value: 'rabbitmq.dev.devrobp.online'
+    value: 'rabbitmq.dev.devrobo.online'
   - name: AMQP_USER
     value: 'roboshop'
   - name: AMQP_PASS

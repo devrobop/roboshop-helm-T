@@ -1,7 +1,26 @@
-name: cart
+name: shipping
 port: 8080
 env:
   - name: CART_ENDPOINT
     value: "cart:8080"
   - name: DB_HOST
-    value: "mysql.dev.devrobp.online"
+    value: "mysql.dev.devrobo.online"
+
+
+schema:
+  enabled: true
+  containers:
+    master-data: master-data.sql
+    schema: schema.sql
+    app-user: app-user.sql
+  env:
+    - name: DB_TYPE
+      value: mysql
+    - name: APP_GIT_URL
+      value: "https://github.com/roboshop-devops-project-v3/shipping"
+    - name: DB_HOST
+      value: "mysql.dev.devrobo.online"
+    - name: DB_USER
+      value: root
+    - name: DB_PASS
+      value: RoboShop@1

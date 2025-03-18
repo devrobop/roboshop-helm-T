@@ -1,6 +1,6 @@
 serviceType: LoadBalancer
 port: 80
-name: cart
+name: frontend
 env:
   - name: CATALOGUE_HOST
     value: "catalogue"
