@@ -1,4 +1,5 @@
 name: cart
+port: 8080
 env:
   - name: CART_HOST
     value: "cart"

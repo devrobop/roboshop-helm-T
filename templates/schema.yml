@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: catalogue-schema
+  labels:
+    appName: catalogue
+spec:
+  template:
+    spec:
+      containers:
+      - name: catalogue
+        image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
+        env:
+          {{- toYaml .Values.schema.env | nindent 10 }}
+      restartPolicy: Never    
+  backoffLimit: 0
+{{- end -}}  

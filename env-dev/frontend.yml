@@ -1,5 +1,5 @@
 serviceType: LoadBalancer
-
+port: 80
 name: cart
 env:
   - name: CATALOGUE_HOST

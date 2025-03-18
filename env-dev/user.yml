@@ -1,4 +1,5 @@
 name: cart
+port: 8080
 env:
   - name: MONGO_URL
     value: "mongodb://mongo.dev.devrobp.online:27017/users"
