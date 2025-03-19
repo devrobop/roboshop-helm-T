@@ -24,3 +24,5 @@ schema:
       value: root
     - name: DB_PASS
       value: RoboShop@1
+    - name: SCHEMA_FILES
+      value: "app-user schema master-data"   
