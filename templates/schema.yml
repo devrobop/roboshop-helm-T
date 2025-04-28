@@ -6,17 +6,18 @@ metadata:
   labels:
     appName: {{ .Values.name }}
   annotations:
-    helm.sh/hook: post-install
+    helm.sh/hook: pre-install
+    helm.sh/hook-delete-policy: before-hook-creation
 spec:
   template:
     spec:
       containers:
-        - name: schema-load
-          image: 216989133949.dkr.ecr.us-east-1.amazonaws.com/schema-load:latest
+        - name: {{ .Values.name }}-schema
+          image: 633788536644.dkr.ecr.us-east-1.amazonaws.com/schema-load:latest
           imagePullPolicy: Always
           envFrom:
-          - secretRef:
-              name: {{ .Values.name }}
+            - secretRef:
+                name: {{ .Values.name }}
       restartPolicy: Never
   backoffLimit: 0
-{{- end -}}
+  {{- end -}}
