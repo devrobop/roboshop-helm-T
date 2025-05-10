@@ -23,4 +23,4 @@ spec:
               value: "1"
       restartPolicy: Never
   backoffLimit: 0
-## Inorder to run this  job to work , we need to create a user in roboshop project   with username and password as user/password
+## Inorder to run this  job to work , we need to create a user in Roboshop project   with username and password as user/password
