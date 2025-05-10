@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: load-setup
   labels:
-    appName:Load-setup
+    appName: Load-setup
 spec:
   template:
     spec:
