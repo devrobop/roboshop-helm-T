@@ -1,9 +1,11 @@
 name: user
 port: 8080
-env:
-  - name: MONGO_URL
-    value: "mongodb://mongo.dev.devrobo.online:27017/users"
-  - name: MONGO
-    value: "true"
-  - name: REDIS_URL
-    value: 'redis://redis.dev.devrobo.online:6379'
+replicas: 1
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "30m"
+  limits:
+    memory: "256Mi"
+    cpu: "50m"
