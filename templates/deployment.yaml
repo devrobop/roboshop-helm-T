@@ -25,3 +25,5 @@ spec:
                 name: {{ .Values.name }}
           resources:
             {{ toYaml .Values.resources | nindent 10 }}
+
+          #
