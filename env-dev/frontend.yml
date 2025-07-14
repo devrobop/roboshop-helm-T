@@ -2,7 +2,6 @@ serviceType: LoadBalancer
 port: 80
 name: frontend
 replicas: 1
-env: dev
 
 resources:
   requests:
