@@ -3,13 +3,13 @@ kind: Job
 metadata:
   name: load-setup
   labels:
-    appName: Load-setup
+    appName: load-setup
 spec:
   template:
     spec:
       containers:
         - name: load-setup
-          image: docker.io/roboshop/rs-load
+          image: docker.io/robotshop/rs-load
           env:
             - name: HOST
               value: "http://frontend"
@@ -20,7 +20,7 @@ spec:
             - name: ERROR
               value: "0"
             - name: SILENT
-              value: "1"
+              value: "0"
       restartPolicy: Never
   backoffLimit: 0
-## Inorder to run this  job to work , we need to create a user in Roboshop project   with username and password as user/password
+## In order this job to work, we need to create a user in roboshop project with username and password as user/password
