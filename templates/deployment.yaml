@@ -4,7 +4,6 @@ metadata:
   name: {{ .Values.name }}
   labels:
     appName: {{ .Values.name }}
-    logType: {{ .Values.logType }}
 spec:
   replicas: {{ .Values.replicas }}
   selector:
@@ -16,7 +15,7 @@ spec:
         appName: {{ .Values.name }}
     spec:
       containers:
-        - name: {{ .Values.name }}-{{ .Values.env }}
+        - name: {{ .Values.name }}
           image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.name }}
           ports:
             - containerPort: {{ .Values.port }}
@@ -25,5 +24,3 @@ spec:
                 name: {{ .Values.name }}
           resources:
             {{ toYaml .Values.resources | nindent 10 }}
-
-          #
