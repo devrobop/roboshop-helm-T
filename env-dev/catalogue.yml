@@ -3,6 +3,8 @@ port: 8080
 schema:
   enabled: true
 replicas: 1
+env: dev
+
 resources:
   requests:
     memory: "128Mi"
