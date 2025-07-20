@@ -2,6 +2,10 @@ name: user
 port: 8080
 replicas: 1
 env: dev
+labels:
+  appName: user
+  appType: nodejs
+  logType: json
 
 resources:
   requests:

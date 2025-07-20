@@ -1,9 +1,16 @@
 name: catalogue
 port: 8080
+labels:
+  appName: catalogue
+  appType: nodejs
+  logType: json
+
 schema:
   enabled: true
+
 replicas: 1
 env: dev
+
 
 resources:
   requests:

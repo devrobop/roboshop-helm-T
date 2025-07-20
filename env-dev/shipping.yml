@@ -1,10 +1,17 @@
 name: shipping
 port: 8080
+labels:
+  appName: shipping
+  appType: java
+  logType: json
 
 schema:
   enabled: true
 
+
+
 replicas: 1
+env: dev
 
 resources:
   requests:
